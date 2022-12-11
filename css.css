@@ -3101,6 +3101,178 @@ input[type="color"]::-webkit-color-swatch {
     background: red;
 }
 
+/* FULLSCREEN OPTION */
+
+#fullscreen {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* FULLSCREEN OPTION */
+
+/* FULLSCREEN WARNING BOX */
+
+#fswarn {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0%,0%);
+    background: #1b1b1b;
+    border: 1px solid white;
+    border-radius: 5px;
+    z-index: 20;
+    -webkit-app-region: no-drag;
+}
+
+#fswarntitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-family: "Titillium Web";
+    font-size: 20px; display: flex;
+    margin-top: 5px;
+}
+
+#fswarncont {
+    width: 360px;
+    height: 150px;
+    background: #101010;
+    border-radius: 5px;
+}
+
+#fswarncontent {
+    height: 100%;
+    width: 100%;
+    font-family: "Titillium Web";
+    font-size: 11px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#fswarncontent::-webkit-scrollbar {
+    background-color: #101010;
+    border-radius: 5px;
+}
+
+#fswarncontent::-webkit-scrollbar-thumb:not(hover) {
+    background-color: #3d3d3d;
+    border-radius: 5px;
+}
+
+#fswarncontentmain {
+    padding: 0px 10px 10px;
+}
+
+#fswarnimportant {
+    background: rgba(32,62,122,1);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Titillium Web";
+    margin-bottom: 10px;
+}
+
+#fshidemsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin: 10px 0px 0px;
+}
+
+#fswarnbtncont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: 90px;
+    margin: 10px 0px 5px;
+}
+
+#fsok:not(hover), #fscancel:not(hover) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    background: rgb(32,62,122);
+    color: white;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.2s;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#fsok:hover {
+    background: limegreen;
+}
+
+#fscancel:hover {
+    background: red;
+}
+
+/* FULLSCREEN WARNING BOX */
+
+/* #fsresopt {
+    animation: fadein 0.5s forwards;
+}
+
+#fsrescont {
+    width: 90%;
+    justify-content: center;
+    margin-left: 20px;
+    padding-left: 0;
+    animation: fadein 0.5s forwards;
+}
+
+.fswhlbl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: rgb(32,62,122);
+    color: white;
+    border-radius: 5px 0px 0px 5px;
+    font-family: 'Titillium Web';
+    padding: 0px 5px;
+}
+
+.fswh:not(hover) {
+    width: 60px;
+    height: 20px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    background: #101010;
+    color: white;
+    font-family: "Titillium Web";
+    font-size: 12px;
+    text-align: center;
+    padding: 2px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.fswh:hover {
+    background: #3d3d3d;
+} */
+
+#fullscreen:hover #fullscreenbox:not(:checked), #nosteam:hover #nosteambox:not(:checked), #desktop:hover #desktopbox:not(:checked), #startwin:hover #startwinbox:not(:checked), #startmin:hover #startminbox:not(:checked), #soundonly:hover #soundonlybox:not(:checked), #allpercent:hover #allpercentbox:not(:checked), #gamecompletion:hover #gamecompletionbox:not(:checked), #ssoverlay:hover #ssoverlaybox:not(:checked), #extwin:hover #extwinbox:not(:checked), #tracking:hover #trackingbox:not(:checked), #hwa:hover #hwabox:not(:checked), #nvda:hover #nvdabox:not(:checked), #notifydebug:hover #notifydebugbox:not(:checked), #statwin:hover #statwinbox:not(:checked) {
+    background-color: #3d3d3d;
+    transition: 0.2s;
+}
+
 #console:not(hover), #appdata:not(hover) {
     position: absolute;
     cursor: pointer;
@@ -3111,6 +3283,79 @@ input[type="color"]::-webkit-color-swatch {
 #console:hover, #appdata:hover {
     opacity: 1;
 }
+
+/* DISPLAY MODE BTN */
+
+#displaymodecont:not(hover) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 23px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    font-family: "Titillium Web";
+    font-size: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-app-region: no-drag;
+    opacity: 0.5;
+}
+
+#displaymodecont:hover {
+    width: 100px;
+    background: rgb(32,66,122);
+    opacity: 1;
+}
+
+#displaymodecont:not(hover) #displaymodeimg {
+    animation: dmgrow 0.25s forwards;
+}
+
+#displaymodecont:hover #displaymodeimg {
+    animation: dmshrink 0.25s forwards;
+}
+
+#displaymodecont:not(hover) #displaymodelbl {
+    animation: fadeout 0.5s forwards;
+}
+
+#displaymodecont:hover #displaymodelbl {
+    animation: fadein 0.5s forwards;
+}
+
+#displaymodeinnercont:not(hover) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%,-50%);
+}
+
+#displaymodecont:hover #displaymodeinnercont {
+    margin-left: 6px;
+}
+
+#displaymodeimg {
+    margin-right: 5px;
+}
+
+@keyframes dmshrink {
+    0% { width: 18px; }
+    100% { width: 12px; }
+}
+
+@keyframes dmgrow {
+    0% { width: 12px; }
+    100% { width: 18px; }
+}
+
+/* DISPLAY MODE BTN */
 
 @keyframes fadein {
     0% { opacity: 0; }

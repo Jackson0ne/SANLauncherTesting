@@ -38,7 +38,7 @@ var gamecompletiontt
 var ssoverlaytt
 var sserrortt
 // var fullscreentt
-var fsselecttt
+// var fsselecttt
 var extwintt
 var extwincolourtt
 var statwintt
@@ -46,6 +46,7 @@ var appdatatt
 var consolett
 var opacitytt
 var statwinresettt
+var notifydebugtt
 
 var usertippy = tippy(user, {
    allowHTML: true,
@@ -580,6 +581,18 @@ tippy('#nvda', {
    theme: "win",
 })
 
+tippy('#notifydebug', {
+   allowHTML: true,
+   content: notifydebugtt,
+   arrow: false,
+   followCursor: true,
+   maxWidth: 195,
+   placement: "right",
+   offset: [30,15],
+   delay: [250,0],
+   theme: "win",
+})
+
 tippy('#sserror', {
    allowHTML: true,
    content: sserrortt,
@@ -667,6 +680,7 @@ function LoadLangTT() {
       consolett = `Opens the DevTools Console in a separate window.`
       opacitytt = `Sets the global opacity of all achievement notifications.`
       statwinresettt = `Clear all stored Achievement Stats`
+      notifydebugtt = `Opens the notification's DevTools window to provide further debugging information.`
    } else if (configtt.lang == "arabic") {
       usertt = "اسم مستخدم Steam<br><div style='font-size: 6px'>يتم تعقب الإنجازات لهذا المستخدم</div>"
       gamett = "لعبة الحالية<br><div style='font-size: 6px'>يظهر اسم اللعبة التي يتم تعقبها حاليًا</div>"
@@ -714,6 +728,7 @@ function LoadLangTT() {
       consolett = `يفتح وحدة تحكم DevTools في نافذة منفصلة.`
       opacitytt = `يضبط التعتيم العام لجميع إعلامات الإنجاز.`
       statwinresettt = `امسح كافة إحصائيات الإنجاز المخزنة`
+      notifydebugtt = `يفتح نافذة DevTools للإشعار لتقديم مزيد من معلومات تصحيح الأخطاء.`
    } else if (configtt.lang == "bulgarian") {
       usertt = "Потребителско име на Steam<br><div style='font-size: 6px'>Постиженията се проследяват за този потребител</div>"
       gamett = "Дисплей На Играта<br><div style='font-size: 6px'>Показва името на играта, която се проследява в момента</div>"
@@ -761,6 +776,7 @@ function LoadLangTT() {
       consolett = `Отваря конзолата DevTools в отделен прозорец.`
       opacitytt = `Задава глобалната непрозрачност на всички известия за постижения.`
       statwinresettt = `Изчистете всички запазени статистики за постиженията`
+      notifydebugtt = `Отваря прозореца DevTools на известието, за да предостави допълнителна информация за отстраняване на грешки.`
    } else if (configtt.lang == "schinese") {
       usertt = "Steam 用户名<br><div style='font-size: 6px'>正在跟踪此用户的成就</div>"
       gamett = "当前游戏<br><div style='font-size: 6px'>显示当前正在跟踪的游戏名称</div>"
@@ -808,6 +824,7 @@ function LoadLangTT() {
       consolett = `在单独的窗口中打开 DevTools 控制台。`
       opacitytt = `设置所有成就通知的全局不透明度。`
       statwinresettt = `清除所有存储的成就统计`
+      notifydebugtt = `打开通知的 DevTools 窗口以提供进一步的调试信息。`
    } else if (configtt.lang == "tchinese") {
       usertt = "Steam 用戶名<br><div style='font-size: 6px'>正在跟踪此用戶的成就</div>"
       gamett = "當前遊戲<br><div style='font-size: 6px'>顯示當前正在跟踪的遊戲名稱</div>"
@@ -855,6 +872,7 @@ function LoadLangTT() {
       consolett = `在單獨的窗口中打開 DevTools 控制台。`
       opacitytt = `設置所有成就通知的全局不透明度。`
       statwinresettt = `清除所有存儲的成就統計`
+      notifydebugtt = `打開通知的 DevTools 窗口以提供進一步的調試信息。`
    } else if (configtt.lang == "czech") {
       usertt = "Uživatelské Jméno Pro Steam<br><div style='font-size: 6px'>Pro tohoto uživatele jsou sledovány úspěchy</div>"
       gamett = "Aktuální Hra<br><div style='font-size: 6px'>Zobrazuje název aktuálně sledované hry</div>"
@@ -902,6 +920,7 @@ function LoadLangTT() {
       consolett = `Otevře konzolu DevTools v samostatném okně.`
       opacitytt = `Nastaví globální neprůhlednost všech oznámení o úspěchu.`
       statwinresettt = `Vymažte všechny uložené statistiky úspěchů`
+      notifydebugtt = `Otevře okno DevTools oznámení, kde jsou uvedeny další informace o ladění.`
    } else if (configtt.lang == "danish") {
       usertt = "Steam Brugernavn<br><div style='font-size: 6px'>Præstationer bliver sporet for denne bruger</div>"
       gamett = "Spil Display<br><div style='font-size: 6px'>Viser navnet på det spil, der spores i øjeblikket</div>"
@@ -949,6 +968,7 @@ function LoadLangTT() {
       consolett = `Åbner DevTools-konsollen i et separat vindue.`
       opacitytt = `Indstiller den globale uigennemsigtighed for alle præstationsmeddelelser.`
       statwinresettt = `Ryd alle gemte præstationsstatistikker`
+      notifydebugtt = `Åbner meddelelsens DevTools-vindue for at give yderligere fejlretningsoplysninger.`
    } else if (configtt.lang == "dutch") {
       usertt = "Steam Gebruikersnaam<br><div style='font-size: 6px'>Prestaties worden bijgehouden voor deze gebruiker</div>"
       gamett = "Huidig ​​Spel<br><div style='font-size: 6px'>Toont de naam van de game die momenteel wordt gevolgd</div>"
@@ -996,6 +1016,7 @@ function LoadLangTT() {
       consolett = `Opent de DevTools-console in een apart venster.`
       opacitytt = `Stelt de globale transparantie van alle prestatiemeldingen in.`
       statwinresettt = `Alle opgeslagen prestatiestatistieken wissen`
+      notifydebugtt = `Opent het DevTools-venster van de melding om verdere foutopsporingsinformatie te geven.`
    } else if (configtt.lang == "finnish") {
       usertt = "Steam Käyttäjätunnus<br><div style='font-size: 6px'>Tämän käyttäjän saavutuksia seurataan</div>"
       gamett = "Nykyinen Peli<br><div style='font-size: 6px'>Näyttää parhaillaan seurattavan pelin nimen</div>"
@@ -1043,6 +1064,7 @@ function LoadLangTT() {
       consolett = `Avaa DevTools-konsolin erilliseen ikkunaan.`
       opacitytt = `Asettaa kaikkien saavutusilmoitusten yleisen läpinäkyvyyden.`
       statwinresettt = `Tyhjennä kaikki tallennetut saavutustilastot`
+      notifydebugtt = `Avaa ilmoituksen DevTools-ikkunan ja antaa lisätietoja virheenkorjauksesta.`
    } else if (configtt.lang == "french") {
       usertt = "Nom d'Utilisateur Steam<br><div style='font-size: 6px'>Le suivi des succés est activé pour cet utilisateur</div>"
       gamett = "Affichage du Jeu<br><div style='font-size: 6px'>Affiche le nom du jeu actuellement suivi</div>"
@@ -1090,6 +1112,7 @@ function LoadLangTT() {
       consolett = `Ouvre la console DevTools dans une fenêtre séparée.`
       opacitytt = `Définit l'opacité globale de toutes les notifications de succès.`
       statwinresettt = `Effacer toutes les statistiques de réalisations stockées`
+      notifydebugtt = `Ouvre la fenêtre DevTools de la notification pour fournir des informations de débogage supplémentaires.`
    } else if (configtt.lang == "german") {
       usertt = "Steam Benutzername<br><div style='font-size: 6px'>Errungenschaften werden für diesen Benutzer nachverfolgt</div>"
       gamett = "Spielanzeige<br><div style='font-size: 6px'>Zeigt den Namen des aktuell verfolgten Spiels an</div>"
@@ -1137,6 +1160,7 @@ function LoadLangTT() {
       consolett = `Öffnet die DevTools-Konsole in einem separaten Fenster.`
       opacitytt = `Legt die globale Deckkraft aller Erfolgsbenachrichtigungen fest.`
       statwinresettt = `Löschen Sie alle gespeicherten Erfolgsstatistiken`
+      notifydebugtt = `Öffnet das DevTools-Fenster der Benachrichtigung, um weitere Debuginformationen bereitzustellen.`
    } else if (configtt.lang == "greek") {
       usertt = "Όνομα χρήστη Steam<br><div style='font-size: 6px'>Τα επιτεύγματα παρακολουθούνται για αυτόν τον χρήστη</div>"
       gamett = "Εμφάνιση παιχνιδιού<br><div style='font-size: 6px'>Εμφανίζει το όνομα του παιχνιδιού που παρακολουθείται αυτήν τη στιγμή</div>"
@@ -1186,6 +1210,7 @@ function LoadLangTT() {
       consolett = `Ανοίγει την Κονσόλα DevTools σε ξεχωριστό παράθυρο.`
       opacitytt = `Ορίζει την καθολική αδιαφάνεια όλων των ειδοποιήσεων επιτευγμάτων.`
       statwinresettt = `Διαγραφή όλων των αποθηκευμένων στατιστικών επιτεύγματος`
+      notifydebugtt = `Ανοίγει το παράθυρο DevTools της ειδοποίησης για να παρέχει περαιτέρω πληροφορίες εντοπισμού σφαλμάτων.`
    } else if (configtt.lang == "hungarian") {
       usertt = "Steam Felhasználónév<br><div style='font-size: 6px'>A felhasználó elért eredményeit nyomon követik</div>"
       gamett = "Játék Kijelző<br><div style='font-size: 6px'>Az éppen nyomon követett játék nevét mutatja</div>"
@@ -1233,6 +1258,7 @@ function LoadLangTT() {
       consolett = `Megnyitja a DevTools konzolt egy külön ablakban.`
       opacitytt = `Beállítja az összes jutalomértesítés globális átlátszatlanságát.`
       statwinresettt = `Törölje az összes tárolt teljesítménystatisztikát`
+      notifydebugtt = `Megnyitja az értesítés DevTools ablakát, hogy további hibakeresési információkat biztosítson.`
    } else if (configtt.lang == "italian") {
       usertt = "Nome Utente Di Steam<br><div style='font-size: 6px'>I risultati vengono monitorati per questo utente</div>"
       gamett = "Display Di Gioco<br><div style='font-size: 6px'>Mostra il nome del gioco attualmente monitorato</div>"
@@ -1280,6 +1306,7 @@ function LoadLangTT() {
       consolett = `Apre la console DevTools in una finestra separata.`
       opacitytt = `Imposta l'opacità globale di tutte le notifiche degli obiettivi.`
       statwinresettt = `Cancella tutte le statistiche degli obiettivi memorizzate`
+      notifydebugtt = `Apre la finestra DevTools della notifica per fornire ulteriori informazioni di debug.`
    } else if (configtt.lang == "japanese") {
       usertt = "Steamユーザー名<br><div style='font-size: 6px'>このユーザーの実績は追跡されています</div>"
       gamett = "ゲームディスプレイ<br><div style='font-size: 6px'>現在追跡されているゲームの名前を表示します</div>"
@@ -1327,6 +1354,7 @@ function LoadLangTT() {
       consolett = `DevTools コンソールを別のウィンドウで開きます。`
       opacitytt = `すべての実績通知の全体的な不透明度を設定します。`
       statwinresettt = `保存されているすべての実績統計をクリアする`
+      notifydebugtt = `通知の DevTools ウィンドウを開き、詳細なデバッグ情報を提供します。`
    } else if (configtt.lang == "koreana") {
       usertt = "Steam 사용자 이름<br><div style='font-size: 6px'>이 사용자의 업적을 추적 중입니다.</div>"
       gamett = "게임 디스플레이<br><div style='font-size: 6px'>현재 추적 중인 게임의 이름을 표시합니다</div>"
@@ -1374,6 +1402,7 @@ function LoadLangTT() {
       consolett = `별도의 창에서 DevTools 콘솔을 엽니다.`
       opacitytt = `모든 업적 알림의 전역 불투명도를 설정합니다.`
       statwinresettt = `저장된 모든 성취 통계 지우기`
+      notifydebugtt = `추가 디버깅 정보를 제공하기 위해 알림의 DevTools 창을 엽니다.`
    } else if (configtt.lang == "norwegian") {
       usertt = "Steam Brukernavn<br><div style='font-size: 6px'>Prestasjoner spores for denne brukeren</div>"
       gamett = "Nåværende Spill<br><div style='font-size: 6px'>Viser navnet på spillet som spores</div>"
@@ -1419,6 +1448,7 @@ function LoadLangTT() {
       consolett = `Åpner DevTools-konsollen i et eget vindu.`
       opacitytt = `Angir den globale opasiteten for alle prestasjonsvarsler.`
       statwinresettt = `Fjern all lagret prestasjonsstatistikk`
+      notifydebugtt = `Åpner varselets DevTools-vindu for å gi ytterligere feilsøkingsinformasjon.`
    } else if (configtt.lang == "polish") {
       usertt = "Nazwa Użytkownika Steam<br><div style='font-size: 6px'>Osiągnięcia tego użytkownika są śledzone</div>"
       gamett = "Wyświetlacz Gry<br><div style='font-size: 6px'>Pokazuje nazwę aktualnie śledzonej gry</div>"
@@ -1466,6 +1496,7 @@ function LoadLangTT() {
       consolett = `Otwiera konsolę DevTools w osobnym oknie.`
       opacitytt = `Ustawia globalną nieprzezroczystość wszystkich powiadomień o osiągnięciach.`
       statwinresettt = `Wyczyść wszystkie zapisane statystyki osiągnięć`
+      notifydebugtt = `Otwiera okno DevTools powiadomienia, aby podać dalsze informacje dotyczące debugowania.`
    } else if (configtt.lang == "portuguese") {
       usertt = "Nome de Usuário do Steam<br><div style='font-size: 6px'>Conquistas estão sendo rastreadas para este usuário</div>"
       gamett = "Exibição Do Jogo<br><div style='font-size: 6px'>Mostra o nome do jogo que está sendo monitorado</div>"
@@ -1513,6 +1544,7 @@ function LoadLangTT() {
       consolett = `Abre o console do DevTools em uma janela separada.`
       opacitytt = `Define a opacidade global de todas as notificações de conquistas.`
       statwinresettt = `Limpe todas as estatísticas de conquista armazenadas`
+      notifydebugtt = `Abre a janela DevTools da notificação para fornecer mais informações de depuração.`
    } else if (configtt.lang == "brazilian") {
       usertt = "Nome de usuário Steam<br><div style='font-size: 6px'>As conquistas estão sendo rastreadas para este usuário</div>"
       gamett = "Mostrador do Jogo<br><div style='font-size: 6px'>Mostra o nome do jogo que está sendo rastreado atualmente</div>"
@@ -1561,6 +1593,7 @@ function LoadLangTT() {
       consolett = `Abre o console DevTools em uma janela separada.`
       opacitytt = `Define a opacidade global de todas as notificações de realização.`
       statwinresettt = `Limpar todas as Estatísticas de Realizações armazenadas`
+      notifydebugtt = `Abre a janela DevTools da notificação para fornecer mais informações de depuração.`
    } else if (configtt.lang == "romanian") {
       usertt = "Nume de Utilizator Steam<br><div style='font-size: 6px'>Realizările sunt urmărite pentru acest utilizator</div>"
       gamett = "Afișarea Jocului<br><div style='font-size: 6px'>Afișează numele jocului care este urmărit în prezent</div>"
@@ -1608,6 +1641,7 @@ function LoadLangTT() {
       consolett = `Deschide consola DevTools într-o fereastră separată.`
       opacitytt = `Setează opacitatea globală a tuturor notificărilor de realizare.`
       statwinresettt = `Ștergeți toate statisticile de realizare stocate`
+      notifydebugtt = `Deschide fereastra DevTools a notificării pentru a furniza informații suplimentare de depanare.`
    } else if (configtt.lang == "russian") {
       usertt = "Имя пользователя Steam<br><div style='font-size: 6px'>Достижения этого пользователя отслеживаются</div>"
       gamett = "Дисплей Игры<br><div style='font-size: 6px'>Показывает название отслеживаемой в данный момент игры</div>"
@@ -1655,6 +1689,7 @@ function LoadLangTT() {
       consolett = `Открывает консоль DevTools в отдельном окне.`
       opacitytt = `Устанавливает глобальную непрозрачность всех уведомлений о достижениях.`
       statwinresettt = `Очистить всю сохраненную статистику достижений`
+      notifydebugtt = `Открывает окно DevTools уведомления для предоставления дополнительной информации об отладке.`
    } else if (configtt.lang == "spanish") {
       usertt = "Nombre de Usuario de Steam<br><div style='font-size: 6px'>Se está realizando un seguimiento de los logros de este usuario</div>"
       gamett = "Juego Actual<br><div style='font-size: 6px'>Muestra el nombre del juego que se está rastreando actualmente</div>"
@@ -1702,6 +1737,7 @@ function LoadLangTT() {
       consolett = `Abre la consola de DevTools en una ventana separada.`
       opacitytt = `Establece la opacidad global de todas las notificaciones de logros.`
       statwinresettt = `Borrar todas las estadísticas de logros almacenados`
+      notifydebugtt = `Abre la ventana DevTools de la notificación para proporcionar más información de depuración.`
    } else if (configtt.lang == "swedish") {
       usertt = "Användarnamn För Steam<br><div style='font-size: 6px'>Prestationer spåras för denna användare</div>"
       gamett = "Aktuellt Spel<br><div style='font-size: 6px'>Visar namnet på spelet som för närvarande spåras</div>"
@@ -1749,6 +1785,7 @@ function LoadLangTT() {
       consolett = `Öppnar DevTools-konsolen i ett separat fönster.`
       opacitytt = `Ställer in den globala opaciteten för alla prestationsaviseringar.`
       statwinresettt = `Rensa all lagrad prestationsstatistik`
+      notifydebugtt = `Öppnar meddelandets DevTools-fönster för att ge ytterligare felsökningsinformation.`
    } else if (configtt.lang == "thai") {
       usertt = "ชื่อผู้ใช้ Steam<br><div style='font-size: 6px'>กำลังติดตามความสำเร็จสำหรับผู้ใช้รายนี้</div>"
       gamett = "เกมปัจจุบัน<br><div style='font-size: 6px'>แสดงชื่อเกมที่กำลังติดตาม</div>"
@@ -1796,6 +1833,7 @@ function LoadLangTT() {
       consolett = `เปิดคอนโซล DevTools ในหน้าต่างแยกต่างหาก`
       opacitytt = `ตั้งค่าความทึบทั่วโลกของการแจ้งเตือนความสำเร็จทั้งหมด`
       statwinresettt = `ล้างสถิติความสำเร็จที่เก็บไว้ทั้งหมด`
+      notifydebugtt = `เปิดหน้าต่าง DevTools ของการแจ้งเตือนเพื่อให้ข้อมูลการดีบักเพิ่มเติม`
    } else if (configtt.lang == "turkish") {
       usertt = "Steam Kullanıcı Adı<br><div style='font-size: 6px'>Bu kullanıcı için başarılar izleniyor</div>"
       gamett = "Suanki Oyun<br><div style='font-size: 6px'>Şu anda izlenen oyunun adını gösterir</div>"
@@ -1843,6 +1881,7 @@ function LoadLangTT() {
       consolett = `DevTools Konsolunu ayrı bir pencerede açar.`
       opacitytt = `Tüm başarı bildirimlerinin genel opaklığını ayarlar.`
       statwinresettt = `Depolanan tüm Başarı İstatistiklerini temizle`
+      notifydebugtt = `Daha fazla hata ayıklama bilgisi sağlamak için bildirimin DevTools penceresini açar.`
    } else if (configtt.lang == "ukrainian") {
       usertt = "Ім'я Користувача Steam<br><div style='font-size: 6px'>Відстежуються досягнення цього користувача</div>"
       gamett = "Ігровий Дисплей<br><div style='font-size: 6px'>Показує назву гри, яка в даний момент відстежується</div>"
@@ -1890,6 +1929,7 @@ function LoadLangTT() {
       consolett = `Відкриває консоль DevTools в окремому вікні.`
       opacitytt = `Встановлює загальну прозорість усіх повідомлень про досягнення.`
       statwinresettt = `Очистити всю збережену статистику досягнень`
+      notifydebugtt = `Відкриває вікно DevTools сповіщення, щоб надати додаткову інформацію про налагодження.`
    } else if (configtt.lang == "vietnamese") {
       usertt = "Tên Người Dùng Steam<br><div style='font-size: 6px'>Thành tích đang được theo dõi cho người dùng này</div>"
       gamett = "Trò Chơi Hiện Tại<br><div style='font-size: 6px'>Hiển thị tên của trò chơi hiện đang được theo dõi</div>"
@@ -1937,6 +1977,7 @@ function LoadLangTT() {
       consolett = `Mở Bảng điều khiển DevTools trong một cửa sổ riêng biệt.`
       opacitytt = `Đặt độ mờ toàn cầu của tất cả các thông báo thành tích.`
       statwinresettt = `Xóa tất cả Thống kê thành tích đã lưu`
+      notifydebugtt = `Mở cửa sổ DevTools của thông báo để cung cấp thêm thông tin gỡ lỗi.`
    }
    
    usertippy.setContent(usertt)
@@ -1985,11 +2026,12 @@ function LoadLangTT() {
    // document.getElementById("fsselect")._tippy.setContent(fsselecttt)
    document.getElementById("extwincont")._tippy.setContent(extwintt)
    // document.getElementById("extwincolour")._tippy.setContent(extwincolourtt)
-   // document.getElementById("statwincont")._tippy.setContent(statwintt)
+   document.getElementById("statwincont")._tippy.setContent(statwintt)
    document.getElementById("appdata")._tippy.setContent(appdatatt)
    document.getElementById("console")._tippy.setContent(consolett)
    document.getElementById("opacity")._tippy.setContent(opacitytt)
-   // document.getElementById("statwinresetcont")._tippy.setContent(statwinresettt)
+   document.getElementById("statwinresetcont")._tippy.setContent(statwinresettt)
+   document.getElementById("notifydebug")._tippy.setContent(notifydebugtt)
 }
 
 LoadLangTT()

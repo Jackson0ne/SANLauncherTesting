@@ -77,6 +77,15 @@ const startapp = () => {
             }
         }
 
+        // FULLSCREEN - Check whether "fullscreen.json" exists and copy over from __dirname "store" folder if not
+        function CheckFullscreen() {
+            if (!fs.existsSync(path.join(sanlocalappdata,"store","fullscreen.json"))) {
+                fs.copyFileSync(path.join(__dirname,"store","fullscreen.json"), path.join(sanlocalappdata,"store","fullscreen.json"))
+            } else {
+                console.log("fullscreen.json exists")
+            }
+        }
+
         if (!fs.existsSync(sanlocalappdata)) {
             console.log("\"Steam Achievement Notifier (V1.8)\" directory does not exist in " + localappdata + ". Creating...")
 
@@ -84,11 +93,13 @@ const startapp = () => {
 
             CheckConfig()
             CheckImg()
+            CheckFullscreen()
             
             console.log("\"Steam Achievement Notifier (V1.8)\" directory created in " + localappdata + ".")
         } else {
             CheckConfig()
             CheckImg()
+            CheckFullscreen()
             
             console.log("\"Steam Achievement Notifier (V1.8)\" directory already exists in " + localappdata)
         }
@@ -100,6 +111,14 @@ const startapp = () => {
         }
 
         const config = JSON.parse(fs.readFileSync(path.join(sanlocalappdata,"store","config.json")))
+
+        try {
+            JSON.parse(fs.readFileSync(path.join(sanlocalappdata,"store","fullscreen.json")))
+        } catch (err) {
+            throw new Error(`"fullscreen.json" caused an error on load: "${err}"`)
+        }
+        
+        const fullscreen = JSON.parse(fs.readFileSync(path.join(sanlocalappdata,"store","fullscreen.json")))
 
         let win
         let tray = null
@@ -245,15 +264,27 @@ const startapp = () => {
         var gameicon
         var gameartimg
 
-        ipcMain.on('gameicon', (event, gameiconsrc, gameartimgsrc) => {
+        // FULLSCREEN - Receive "gamename" back from "trackwin" and write to "fullscreen.json" (otherwise, "gamename" gets overwritten to nothing for some reason)
+        ipcMain.on('gameicon', (event, gameiconsrc, gameartimgsrc, gamename) => {
             // Reset icon/art to null to prevent previous game values being stored
             gameicon = null
             gameartimg = null
             gameicon = gameiconsrc
             gameartimg = gameartimgsrc
+
+            if (config.fullscreen == true) {
+                fullscreen["gamename"] = gamename
+                fullscreen["gameicon"] = gameiconsrc
+                fullscreen["gameart"] = gameartimgsrc
+                fs.writeFileSync(path.join(sanlocalappdata,"store","fullscreen.json"), JSON.stringify(fullscreen, null, 2))
+
+                win.webContents.send('gametrackdetails', gamename, gameicon, gameartimg)
+            }
         })
 
         var offset = {}
+
+        let notifywin
 
         ipcMain.on('notifywin', (event, queueobj) => {
             const config = JSON.parse(fs.readFileSync(path.join(sanlocalappdata,"store","config.json")))
@@ -371,7 +402,7 @@ const startapp = () => {
                 }
             }
 
-            const notifywin = new BrowserWindow({
+            notifywin = new BrowserWindow({
                 width: width,
                 height: height,
                 title: 'notifywin',
@@ -513,7 +544,14 @@ const startapp = () => {
                     label: trayexit,
                     icon: nativeImage.createFromPath(path.join(__dirname,"img","close.png")).resize({ width:16 }),
                     click: () => {
-                        app.exit()
+                        if (config.fullscreen == true) {
+                            spawn("powershell.exe", ["-Command","taskkill /f /im goverlay.exe"])
+                            .on('exit', () => {
+                                app.exit()
+                            })
+                        } else {
+                            app.exit()
+                        }
                     }
                 }
             ]
@@ -546,7 +584,14 @@ const startapp = () => {
                         label: trayexit,
                         icon: nativeImage.createFromPath(path.join(__dirname,"img","close.png")).resize({ width:16 }),
                         click: () => {
-                            app.exit()
+                            if (config.fullscreen == true) {
+                                spawn("powershell.exe", ["-Command","taskkill /f /im goverlay.exe"])
+                                .on('exit', () => {
+                                    app.exit()
+                                })
+                            } else {
+                                app.exit()
+                            }
                         }
                     }
                 ]
@@ -584,7 +629,14 @@ const startapp = () => {
                         label: trayexit,
                         icon: nativeImage.createFromPath(path.join(__dirname,"img","close.png")).resize({ width:16 }),
                         click: () => {
-                            app.exit()
+                            if (config.fullscreen == true) {
+                                spawn("powershell.exe", ["-Command","taskkill /f /im goverlay.exe"])
+                                .on('exit', () => {
+                                    app.exit()
+                                })
+                            } else {
+                                app.exit()
+                            }
                         }
                     }
                 ]
@@ -615,7 +667,14 @@ const startapp = () => {
                         label: trayexit,
                         icon: nativeImage.createFromPath(path.join(__dirname,"img","close.png")).resize({ width:16 }),
                         click: () => {
-                            app.exit()
+                            if (config.fullscreen == true) {
+                                spawn("powershell.exe", ["-Command","taskkill /f /im goverlay.exe"])
+                                .on('exit', () => {
+                                    app.exit()
+                                })
+                            } else {
+                                app.exit()
+                            }
                         }
                     }
                 ]
@@ -1193,11 +1252,98 @@ const startapp = () => {
             win.webContents.openDevTools({ mode: "detach" })
         })
 
+        let statwin
+
+        ipcMain.on('spawnstatwin', (event, user, translations) => {
+            statwin = new BrowserWindow({
+                width: 300,
+                height: 600,
+                minWidth: 300,
+                minHeight: 200,
+                maxHeight: 600,
+                autoHideMenuBar: true,
+                title: `Achievement Stats (${user})`,
+                center: true,
+                transparent: true,
+                frame: false,
+                webPreferences: {
+                    nodeIntegration: true,
+                    contextIsolation: false,
+                    backgroundThrottling: false
+                }
+            })
+
+            statwin.loadFile(path.join(__dirname,"statwin.html"))
+
+            // statwin.webContents.openDevTools({ mode: "detach" })
+
+            statwin.on('ready-to-show', () => {
+                statwin.webContents.send('user', user, translations)
+            })
+
+            ipcMain.on('despawnstatwin', () => {
+                if (statwin) {
+                    statwin.destroy()
+                }
+            })
+
+            statwin.on('close', () => {
+                statwin.destroy()
+                statwin = null
+                win.webContents.send('statwinclosed')
+            })
+        })
+
+        ipcMain.on('statwinopen', () => {
+            win.webContents.send('statwinopen')
+        })
+
+        ipcMain.on('statwingame', (event, appid) => {
+            if (statwin) {
+                statwin.webContents.send('statwingame', appid)
+            }
+        })
+
+        ipcMain.on('updatestatwin', (event, apiname) => {
+            if (statwin) {
+                statwin.webContents.send('updatestatwin', apiname)
+            }
+        })
+
+        ipcMain.on('statwinnogame', () => {
+            if (statwin) {
+                statwin.webContents.send('statwinnogame')
+            }
+        })
+
+        ipcMain.on('resetstats', (event, options) => {
+            var statsresult = dialog.showMessageBoxSync(win, options)
+            if (statsresult == 0) {
+                if (statwin) {
+                    statwin.destroy()
+                }
+
+                win.webContents.send('clearlocalstorage')
+            } else {
+                console.log("Achievement Stats Reset cancelled")
+            }
+        })
+
+        ipcMain.on('closestatwin', () => {
+            statwin.destroy()
+            statwin = null
+            win.webContents.send('statwinclosed')
+        })
+
         ipcMain.on('setstartwin', (event, bool, exepath) => {
             app.setLoginItemSettings({
                 openAtLogin: bool,
                 path: exepath
             })
+        })
+
+        ipcMain.on('notifydebug', () => {
+            notifywin.webContents.openDevTools({ mode: "detach" })
         })
 
         nativeTheme.themeSource = "dark"
@@ -1207,6 +1353,7 @@ const startapp = () => {
 
     app.whenReady().then(() => {
         RunApp()
+
         powerSaveBlocker.start('prevent-app-suspension')
         
         powerMonitor.on('resume', () => {
