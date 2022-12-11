@@ -76,8 +76,10 @@ function IntToFloat(num) {
     }
 }
 
-const ghuser = "SteamAchievementNotifier"
-const ghrepo = "SteamAchievementNotifier"
+// const ghuser = "SteamAchievementNotifier"
+// const ghrepo = "SteamAchievementNotifier"
+const ghuser = "Jackson0ne"
+const ghrepo = "SANLauncherTesting"
 
 const files = []
 
@@ -635,7 +637,7 @@ function Run() {
         
                                     if (repoversion > localversion) {
                                         var confirmmsg
-
+                                        
                                         if (branch == "beta") {
                                             confirmmsg = `New App Revision (BETA ${IntToFloat(repoversion)}) available! Do you want to download it?`
                                         } else {
@@ -655,7 +657,7 @@ function Run() {
             
                                             StartDownload()
                                         } else {
-                                            StartApp()
+                                            // StartApp()
                                         }
                                     } else {
                                         // Check for missing files on every launch - re-download if files are missing
@@ -740,20 +742,20 @@ function Run() {
                                             console.log("%cUpdate checks complete - app should now start...", "color: deepskyblue")
                                             document.getElementById("log").innerHTML = `Starting...`
                                             document.getElementById("log").style.color = "white"
-                                            StartApp()
+                                            // StartApp()
                                         })
                                     } else {
                                         console.log("%cGOverlay.exe exists!", "color: seagreen")
                                         console.log("%cUpdate checks complete - app should now start...", "color: deepskyblue")
                                         document.getElementById("log").innerHTML = `Starting...`
                                         document.getElementById("log").style.color = "white"
-                                        StartApp()
+                                        // StartApp()
                                     }
                                 } else {
                                     console.log("%cUpdate checks complete - app should now start...", "color: deepskyblue")
                                     document.getElementById("log").innerHTML = `Starting...`
                                     document.getElementById("log").style.color = "white"
-                                    StartApp()
+                                    // StartApp()
                                 }
                             }
         
@@ -779,7 +781,7 @@ function Run() {
                         document.getElementById("log").style.color = "orange"
         
                         console.log("%cApp should now start...", "color: deeppink")
-                        StartApp()
+                        // StartApp()
                     })
                 })
             })
@@ -789,7 +791,7 @@ function Run() {
             document.getElementById("log").style.color = "red"
 
             console.log("%cApp should now start...", "color: pink")
-            StartApp()
+            // StartApp()
         })
     }
 
