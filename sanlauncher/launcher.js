@@ -1,4 +1,5 @@
 document.getElementById("maincont").style.opacity = 1
+document.getElementById("maincont").style.backgroundColor = "deeppink"
 
 const { ipcRenderer } = require('electron')
 const exec = require('child_process').exec
