@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Deschideți Fereastra cu Statistici"
+document.getElementById("statwinlbltxt").innerHTML = "Deschideți Fereastra cu Statistici"
 
 statsresettitle = "Resetați Toate Datele de Realizare Stocate?"
 statsresetbody = "Toate datele de realizare stocate anterior vor fi șterse de pe acest dispozitiv. Cele mai recente date de realizare vor fi preluate la următoarea deschidere a ferestrei Statistici de Realizare.\n\nVă rugăm să fiți conștienți de faptul că preluarea datelor de realizare utilizează apeluri API Web Steam pentru fiecare joc deținut din Biblioteca Steam a utilizatorului. Valve limitează cantitatea de apeluri API Steam Web la 100,000 pe zi pentru cheia API a fiecărui utilizator.\n\nCa urmare, în funcție de cantitatea de jocuri din Biblioteca dvs. Steam, acest lucru poate afecta funcționalitatea generală a aplicației dacă funcția de resetare a datelor de realizare este suprautilizată."
@@ -228,3 +228,6 @@ statwincurrent = "JOC ACTUAL"
 statwinall = "TOATE JOCURILE"
 statwincomplete = "COMPLET (100%)"
 statwintop5 = "5 CELE MAI BUNE JOCURI"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Afișați Consola de Notificare"

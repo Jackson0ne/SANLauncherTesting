@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Open Achievement Stats Window"
+document.getElementById("statwinlbltxt").innerHTML = "Open Achievement Stats Window"
 
 statsresettitle = "Reset All Stored Achievement Data?"
 statsresetbody = "All previously stored achievement data will be removed from this device. Your most recent achievement data will be retrieved when the Achievement Stats window is next opened.\n\nPlease be aware that retrieving achievement data uses Steam Web API calls for each owned game in the user's Steam Library. Valve limits the amount of Steam Web API calls to 100,000 per day for each user's API Key.\n\nAs a result, depending on the amount of games in your Steam Library, this may affect the general functionality of the application if the function to reset your achievement data is greatly overused."
@@ -228,3 +228,6 @@ statwincurrent = "CURRENT GAME"
 statwinall = "ALL GAMES"
 statwincomplete = "COMPLETE (100%)"
 statwintop5 = "TOP 5 GAMES"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Show Notification Console"

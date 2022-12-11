@@ -217,7 +217,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Åbn Statistikvinduet"
+document.getElementById("statwinlbltxt").innerHTML = "Åbn Statistikvinduet"
 
 statsresettitle = "Nulstille Alle Gemte Præstationsdata?"
 statsresetbody = "Alle tidligere gemte præstationsdata vil blive fjernet fra denne enhed. Dine seneste præstationsdata vil blive hentet, næste gang vinduet Præstationsstatistik åbnes.\n\nVær opmærksom på, at hentning af præstationsdata bruger Steam Web API-kald for hvert ejet spil i brugerens Steam-bibliotek. Valve begrænser mængden af ​​Steam Web API-kald til 100.000 pr. dag for hver brugers API-nøgle.\n\nSom et resultat, afhængigt af mængden af ​​spil i dit Steam-bibliotek, kan dette påvirke den generelle funktionalitet af applikationen, hvis funktionen til at nulstille dine præstationsdata er meget overudnyttet."
@@ -227,3 +227,6 @@ statwincurrent = "AKTUELLE SPIL"
 statwinall = "ALLE SPIL"
 statwincomplete = "FULDFØRT (100 %)"
 statwintop5 = "BEDSTE 5 SPIL"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Vis Notifikationskonsol"

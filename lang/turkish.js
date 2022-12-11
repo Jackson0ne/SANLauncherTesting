@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Başarı İstatistikleri Penceresini Aç"
+document.getElementById("statwinlbltxt").innerHTML = "Başarı İstatistikleri Penceresini Aç"
 
 statsresettitle = "Saklanan Tüm Başarı Verileri Sıfırlansın mı?"
 statsresetbody = "Önceden saklanan tüm başarı verileri bu cihazdan kaldırılacak. En son başarı verileriniz, Başarı İstatistikleri penceresi bir sonraki açıldığında alınacaktır.\n\nLütfen başarı verilerini almanın, kullanıcının Steam Kitaplığındaki sahip olunan her oyun için Steam Web API çağrılarını kullandığını unutmayın. Valve, her kullanıcının API Anahtarı için Steam Web API çağrılarının miktarını günde 100,000 ile sınırlar.\n\nSonuç olarak, Steam Kitaplığınızdaki oyun miktarına bağlı olarak, başarı verilerinizi sıfırlama işlevi çok fazla kullanılırsa bu, uygulamanın genel işlevselliğini etkileyebilir."
@@ -228,3 +228,6 @@ statwincurrent = "SUANKİ OYUN"
 statwinall = "BÜTÜN OYUNLAR"
 statwincomplete = "TAMAMLANDI (%100)"
 statwintop5 = "EN İYİ 5 OYUN"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Bildirim Konsolunu Göster"

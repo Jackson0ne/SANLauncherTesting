@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Mở Cửa Sổ Thống Kê Thành Tích"
+document.getElementById("statwinlbltxt").innerHTML = "Mở Cửa Sổ Thống Kê Thành Tích"
 
 statsresettitle = "Đặt Lại Tất Cả Dữ Liệu Thành Tích Đã Lưu Trữ?"
 statsresetbody = "Tất cả dữ liệu thành tích đã lưu trữ trước đó sẽ bị xóa khỏi thiết bị này. Dữ liệu thành tích gần đây nhất của bạn sẽ được truy xuất khi cửa sổ Thống kê Thành tích được mở tiếp theo.\n\nXin lưu ý rằng việc truy xuất dữ liệu thành tích sử dụng lệnh gọi API Web Steam cho từng trò chơi thuộc sở hữu của Thư viện Steam của người dùng. Valve giới hạn số lượng lệnh gọi API Steam Web ở mức 100.000 cho mỗi khóa API người dùng mỗi ngày.\n\nDo đó, tùy thuộc vào số lượng trò chơi trong Thư viện Steam của bạn, điều này có thể ảnh hưởng đến chức năng chung của ứng dụng nếu chức năng đặt lại dữ liệu thành tích của bạn bị lạm dụng quá nhiều."
@@ -228,3 +228,6 @@ statwincurrent = "TRÒ CHƠI HIỆN TẠI"
 statwinall = "TẤT CẢ TRÒ CHƠI"
 statwincomplete = "HOÀN THÀNH (100%)"
 statwintop5 = "5 TRÒ CHƠI HÀNG ĐẦU"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Hiển Thị Bảng Điều Khiển Thông Báo"

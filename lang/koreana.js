@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "업적 통계 창 열기"
+document.getElementById("statwinlbltxt").innerHTML = "업적 통계 창 열기"
 
 statsresettitle = "저장된 모든 업적 데이터를 재설정하시겠습니까?"
 statsresetbody = "이전에 저장된 모든 업적 데이터가 이 기기에서 제거됩니다. 다음에 업적 통계 창이 열리면 가장 최근의 업적 데이터가 검색됩니다.\n\n업적 데이터 검색은 사용자의 Steam 라이브러리에 있는 각 소유 게임에 대해 Steam Web API 호출을 사용한다는 점에 유의하십시오. Valve는 각 사용자의 API 키에 대해 Steam Web API 호출을 하루 100,000개로 제한합니다.\n\n결과적으로 Steam 라이브러리에 있는 게임의 양에 따라 업적 데이터를 재설정하는 기능을 과도하게 사용하면 응용 프로그램의 일반적인 기능에 영향을 줄 수 있습니다."
@@ -228,3 +228,5 @@ statwincurrent = "현재 게임"
 statwinall = "모든 게임들"
 statwincomplete = "완료(100%)"
 statwintop5 = "상위 5개 게임"
+
+document.getElementById("notifydebuglbl").innerHTML = "알림 콘솔 표시"

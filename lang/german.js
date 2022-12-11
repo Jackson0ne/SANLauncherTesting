@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Statistikfenster für Erfolge"
+document.getElementById("statwinlbltxt").innerHTML = "Statistikfenster für Erfolge"
 
 statsresettitle = "Alle Gespeicherten Erfolgsdaten Zurücksetzen?"
 statsresetbody = "Alle zuvor gespeicherten Erfolgsdaten werden von diesem Gerät entfernt. Ihre letzten Erfolgsdaten werden abgerufen, wenn das Statistikfenster das nächste Mal geöffnet wird.\n\nBitte beachten Sie, dass zum Abrufen von Erfolgsdaten Steam Web API Aufrufe für jedes eigene Spiel in der Steam-Bibliothek des Benutzers verwendet werden. Valve begrenzt die Anzahl der Steam Web API Aufrufe auf 100.000 pro Tag für den API-Schlüssel jedes Benutzers.\n\nJe nach Anzahl der Spiele in Ihrer Steam-Bibliothek kann dies daher die allgemeine Funktionalität der Anwendung beeinträchtigen, wenn die Funktion zum Zurücksetzen Ihrer Erfolgsdaten stark überbeansprucht wird."
@@ -228,3 +228,6 @@ statwincurrent = "AKTUELLES SPIEL"
 statwinall = "ALLE SPIELE"
 statwincomplete = "VOLLSTÄNDIG (100%)"
 statwintop5 = "DIE BESTEN 5 SPIELE"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Benachrichtigungskonsole Anzeigen"

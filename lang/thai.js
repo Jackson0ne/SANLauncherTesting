@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "เปิดหน้าต่างสถิติความสำเร็จ"
+document.getElementById("statwinlbltxt").innerHTML = "เปิดหน้าต่างสถิติความสำเร็จ"
 
 statsresettitle = "รีเซ็ตข้อมูลความสำเร็จที่เก็บไว้ทั้งหมด?"
 statsresetbody = "ข้อมูลความสำเร็จที่เก็บไว้ก่อนหน้านี้ทั้งหมดจะถูกลบออกจากอุปกรณ์นี้ ข้อมูลความสำเร็จล่าสุดของคุณจะถูกดึงมาเมื่อเปิดหน้าต่างสถิติความสำเร็จครั้งถัดไป\n\nโปรดทราบว่าการดึงข้อมูลความสำเร็จนั้นใช้การเรียก Steam Web API สำหรับแต่ละเกมที่เป็นเจ้าของในคลัง Steam ของผู้ใช้ Valve จำกัดจำนวนการเรียก Steam Web API ไว้ที่ 100,000 ต่อวันสำหรับคีย์ API ของผู้ใช้แต่ละราย\n\nด้วยเหตุนี้ ขึ้นอยู่กับจำนวนเกมในคลัง Steam ของคุณ ซึ่งอาจส่งผลต่อการทำงานทั่วไปของแอปพลิเคชัน หากใช้ฟังก์ชันรีเซ็ตข้อมูลความสำเร็จมากเกินไป"
@@ -228,3 +228,6 @@ statwincurrent = "เกมปัจจุบัน"
 statwinall = "เกมส์ทั้งหมด"
 statwincomplete = "สมบูรณ์ (100%)"
 statwintop5 = "5 อันดับเกม"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "แสดงคอนโซลการแจ้งเตือน"

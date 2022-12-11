@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Åpne Statistikkvinduet"
+document.getElementById("statwinlbltxt").innerHTML = "Åpne Statistikkvinduet"
 
 statsresettitle = "Tilbakestille Alle Lagrede Prestasjonsdata?"
 statsresetbody = "Alle tidligere lagrede prestasjonsdata vil bli fjernet fra denne enheten. Dine siste prestasjonsdata vil bli hentet neste gang vinduet Prestasjonsstatistikk åpnes.\n\nVær oppmerksom på at henting av prestasjonsdata bruker Steam Web API-kall for hvert eid spill i brukerens Steam-bibliotek. Valve begrenser mengden Steam Web API-anrop til 100,000 per dag for hver brukers API-nøkkel.\n\nSom et resultat, avhengig av mengden spill i Steam-biblioteket ditt, kan dette påvirke den generelle funksjonaliteten til applikasjonen hvis funksjonen for å tilbakestille prestasjonsdataene dine er sterkt overbrukt."
@@ -228,3 +228,6 @@ statwincurrent = "GJELDENDE SPILL"
 statwinall = "ALLE SPILL"
 statwincomplete = "FULLT (100 %)"
 statwintop5 = "TOPP 5 SPILL"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Vis Varslingskonsoll"

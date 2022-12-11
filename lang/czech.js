@@ -217,7 +217,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Otevřete Okno Statistiky Úspěchů"
+document.getElementById("statwinlbltxt").innerHTML = "Otevřete Okno Statistiky Úspěchů"
 
 statsresettitle = "Resetovat Všechna Uložená Data Úspěchů?"
 statsresetbody = "Z tohoto zařízení budou odstraněna všechna dříve uložená data úspěchů. Vaše nejnovější údaje o úspěších budou načteny při příštím otevření okna Statistiky Úspěchů.\n\nMějte prosím na paměti, že získávání dat úspěchů využívá volání Steam Web API pro každou vlastněnou hru v knihovně Steam uživatele. Valve omezuje počet volání Steam Web API na 100 000 za den pro každý uživatelský klíč API.\n\nV důsledku toho, v závislosti na množství her ve vaší knihovně Steam, to může ovlivnit obecnou funkčnost aplikace, pokud je funkce pro resetování vašich úspěchů velmi nadměrně využívána."
@@ -227,3 +227,6 @@ statwincurrent = "AKTUÁLNÍ HRA"
 statwinall = "VŠECHNY HRY"
 statwincomplete = "KOMPLETNÍ (100 %)"
 statwintop5 = "5 NEJLEPŠÍCH HER"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Zobrazit Oznamovací Konzolu"

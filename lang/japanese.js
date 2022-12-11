@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "アチーブメント統計ウィンドウを開く"
+document.getElementById("statwinlbltxt").innerHTML = "アチーブメント統計ウィンドウを開く"
 
 statsresettitle = "保存されているすべての実績データをリセットしますか?"
 statsresetbody = "以前に保存された実績データはすべて、このデバイスから削除されます。達成統計ウィンドウが次に開かれたときに、最新の達成データが取得されます。\n\n実績データの取得には、ユーザーの Steam ライブラリで所有している各ゲームの Steam Web API 呼び出しが使用されることに注意してください。 Valve は、Steam Web API 呼び出しの量を、ユーザーの API キーごとに 1 日あたり 100,000 に制限しています。\n\n結果として、Steam ライブラリ内のゲームの量によっては、実績データをリセットする機能が過度に使用されている場合、アプリケーションの一般的な機能に影響を与える可能性があります。"
@@ -228,3 +228,6 @@ statwincurrent = "現在のゲーム"
 statwinall = "すべてのゲーム"
 statwincomplete = "完全 (100%)"
 statwintop5 = "トップ 5 ゲーム"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "通知コンソールを表示"

@@ -217,7 +217,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Statistiekenvenster Openen"
+document.getElementById("statwinlbltxt").innerHTML = "Statistiekenvenster Openen"
 
 statsresettitle = "Alle Opgeslagen Prestatiegegevens Resetten?"
 statsresetbody = "Alle eerder opgeslagen prestatiegegevens worden van dit apparaat verwijderd. Je meest recente prestatiegegevens worden opgehaald wanneer het venster Prestatiestatistieken de volgende keer wordt geopend.\n\nHoud er rekening mee dat het ophalen van prestatiegegevens Steam Web API-aanroepen gebruikt voor elke game in de Steam-bibliotheek van de gebruiker. Valve beperkt het aantal Steam Web API-aanroepen tot 100,000 per dag voor de API-sleutel van elke gebruiker.\n\nAls gevolg hiervan kan dit, afhankelijk van het aantal games in je Steam-bibliotheek, de algemene functionaliteit van de applicatie beïnvloeden als de functie om je prestatiegegevens te resetten veel te veel wordt gebruikt."
@@ -227,3 +227,6 @@ statwincurrent = "HUIDIGE SPEL"
 statwinall = "ALLE SPELEN"
 statwincomplete = "COMPLEET (100%)"
 statwintop5 = "BESTE 5 SPELLEN"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Meldingsconsole Tonen"

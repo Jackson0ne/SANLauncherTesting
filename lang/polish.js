@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Otwórz Okno Statystyk Osiągnięć"
+document.getElementById("statwinlbltxt").innerHTML = "Otwórz Okno Statystyk Osiągnięć"
 
 statsresettitle = "Zresetować Wszystkie Zapisane Dane Osiągnięć?"
 statsresetbody = "Wszystkie zapisane wcześniej dane o osiągnięciach zostaną usunięte z tego urządzenia. Twoje najnowsze dane o osiągnięciach zostaną pobrane przy następnym otwarciu okna Statystyk Osiągnięć.\n\nPamiętaj, że pobieranie danych o osiągnięciach wykorzystuje wywołania Steam Web API dla każdej posiadanej gry w bibliotece Steam użytkownika. Valve ogranicza liczbę wywołań Steam Web API do 100,000 dziennie dla klucza API każdego użytkownika.\n\nW rezultacie, w zależności od ilości gier w Twojej bibliotece Steam, może to wpłynąć na ogólną funkcjonalność aplikacji, jeśli funkcja resetowania danych osiągnięć jest nadużywana."
@@ -228,3 +228,6 @@ statwincurrent = "AKTUALNA GRA"
 statwinall = "WSZYSTKIE GRY"
 statwincomplete = "KOMPLETNY (100%)"
 statwintop5 = "5 NAJLEPSZYCH GIER"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Pokaż Konsolę Powiadomień"

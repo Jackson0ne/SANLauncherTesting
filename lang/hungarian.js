@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Statisztika Ablak Megjelenítése"
+document.getElementById("statwinlbltxt").innerHTML = "Statisztika Ablak Megjelenítése"
 
 statsresettitle = "Visszaállítja Az Összes Tárolt Eredményadatot?"
 statsresetbody = "A korábban tárolt jutalomadatokat eltávolítjuk erről az eszközről. A legfrissebb jutalomadatokat a rendszer a Statisztika ablak következő megnyitásakor kéri le.\n\nKérjük, vegye figyelembe, hogy a jutalmak adatainak lekérése a Steam Web API-hívásokat használja a felhasználó Steam könyvtárában lévő minden egyes tulajdonában lévő játékhoz. A Valve a Steam Web API-hívások számát napi 100,000-re korlátozza minden egyes felhasználó API-kulcsához.\n\nEnnek eredményeként a Steam könyvtárban lévő játékok mennyiségétől függően az alkalmazás általános működését befolyásolhatja, ha a teljesítmény-visszaállítási funkció jelentősen túlterhelt."
@@ -228,3 +228,6 @@ statwincurrent = "AKTUÁLIS JÁTÉK"
 statwinall = "MINDEN JÁTÉK"
 statwincomplete = "TELJES (100%)"
 statwintop5 = "5 LEGJOBB JÁTÉK"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Értesítési Konzol Megjelenítése"

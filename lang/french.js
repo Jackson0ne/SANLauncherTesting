@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Fenêtre des Statistiques de Succès"
+document.getElementById("statwinlbltxt").innerHTML = "Fenêtre des Statistiques de Succès"
 
 statsresettitle = "Réinitialiser Toutes Les Données de Réalisations Stockées?"
 statsresetbody = "Toutes les données de réalisations précédemment stockées seront supprimées de cet appareil. Vos données de succès les plus récentes seront récupérées lors de la prochaine ouverture de la fenêtre Statistiques de Succès.\n\nVeuillez noter que la récupération des données de succès utilise les appels de l'API Web Steam pour chaque jeu détenu dans la bibliothèque Steam de l'utilisateur. Valve limite le nombre d'appels de l'API Web Steam à 100,000 par jour pour la clé API de chaque utilisateur.\n\nPar conséquent, selon la quantité de jeux dans votre bibliothèque Steam, cela peut affecter la fonctionnalité générale de l'application si la fonction de réinitialisation de vos données de succès est largement surutilisée."
@@ -228,3 +228,6 @@ statwincurrent = "JEU EN COURS"
 statwinall = "TOUS LES JEUX"
 statwincomplete = "COMPLET (100%)"
 statwintop5 = "LES 5 MEILLEURS JEUX"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Afficher la Console de Notification"

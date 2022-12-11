@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "打開成就統計窗口"
+document.getElementById("statwinlbltxt").innerHTML = "打開成就統計窗口"
 
 statsresettitle = "重置所有存儲的成就數據？"
 statsresetbody = "所有以前存儲的成就數據都將從該設備中刪除。下次打開“成就統計”窗口時，將檢索您最近的成就數據。\n\n請注意，檢索成就數據會使用 Steam Web API 調用用戶 Steam 庫中每個擁有的遊戲。 Valve 將每位用戶的 API 密鑰的 Steam Web API 調用量限制為每天 100,000 次。\n\n因此，根據您 Steam 庫中的遊戲數量，如果重置成就數據的功能被過度使用，這可能會影響應用程序的一般功能。"
@@ -228,3 +228,6 @@ statwincurrent = "當前遊戲"
 statwinall = "所有遊戲"
 statwincomplete = "完成 (100%)"
 statwintop5 = "前 5 名遊戲"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "顯示通知控制台"

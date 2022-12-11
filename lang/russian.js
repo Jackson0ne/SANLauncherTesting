@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Окно Статистики"
+document.getElementById("statwinlbltxt").innerHTML = "Окно Статистики"
 
 statsresettitle = "Сбросить Все Сохраненные Данные Достижений?"
 statsresetbody = "Все ранее сохраненные данные достижений будут удалены с этого устройства. Ваши самые последние данные о достижениях будут получены при следующем открытии окна Статистика достижений.\n\nИмейте в виду, что для получения данных о достижениях используются вызовы веб-API Steam для каждой принадлежащей игре в библиотеке Steam пользователя. Valve ограничивает количество вызовов веб-API Steam до 100,000 в день для ключа API каждого пользователя.\n\nВ результате, в зависимости от количества игр в вашей библиотеке Steam, это может повлиять на общую функциональность приложения, если функция сброса данных ваших достижений сильно перегружена."
@@ -228,3 +228,6 @@ statwincurrent = "ТЕКУЩАЯ ИГРА"
 statwinall = "ВСЕ ИГРЫ"
 statwincomplete = "ПОЛНЫЙ (100%)"
 statwintop5 = "ТОП 5 ИГР"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Показать Консоль Уведомлений"

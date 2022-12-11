@@ -222,7 +222,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Abrir Janela de Estatísticas"
+document.getElementById("statwinlbltxt").innerHTML = "Abrir Janela de Estatísticas"
 
 statsresettitle = "Redefinir todos os dados de Realizações Armazenadas?"
 statsresetbody = "Todos os dados de realização previamente armazenados serão removidos deste dispositivo. Seus dados de conquistas mais recentes serão recuperados quando a janela de Estatísticas de conquistas for aberta em seguida.\n\nPor favor, esteja ciente de que a recuperação de dados de realizações utiliza as chamadas Steam Web API para cada jogo de propriedade do usuário na Biblioteca Steam do usuário. A Valve limita a quantidade de chamadas de Steam Web API a 100.000 por dia para a chave API de cada usuário.\n\nComo resultado, dependendo da quantidade de jogos em sua biblioteca Steam, isto pode afetar a funcionalidade geral da aplicação se a função de redefinir seus dados de realização for muito utilizada."
@@ -232,3 +232,6 @@ statwincurrent = "JOGO CORRENTE"
 statwinall = "TODOS OS JOGOS"
 statwincomplete = "COMPLETO (100%)"
 statwintop5 = "5 MELHORES JOGOS"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Mostrar Console de Notificação"

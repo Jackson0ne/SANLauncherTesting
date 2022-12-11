@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Abrir Ventana de Estadísticas"
+document.getElementById("statwinlbltxt").innerHTML = "Abrir Ventana de Estadísticas"
 
 statsresettitle = "¿Restablecer Todos los Datos de Logros Almacenados?"
 statsresetbody = "Todos los datos de logros previamente almacenados se eliminarán de este dispositivo. Los datos de sus logros más recientes se recuperarán la próxima vez que se abra la ventana Estadísticas de Logros.\n\nTenga en cuenta que la recuperación de datos de logros utiliza llamadas a la API Web de Steam para cada juego propio en la biblioteca de Steam del usuario. Valve limita la cantidad de llamadas a la API Web de Steam a 100,000 por día para la clave API de cada usuario.\n\nComo resultado, dependiendo de la cantidad de juegos en su biblioteca de Steam, esto puede afectar la funcionalidad general de la aplicación si la función para restablecer sus datos de logros se usa demasiado."
@@ -228,3 +228,6 @@ statwincurrent = "JUEGO ACTUAL"
 statwinall = "TODOS LOS JUEGOS"
 statwincomplete = "COMPLETO (100%)"
 statwintop5 = "LOS 5 MEJORES JUEGOS"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Mostrar Consola de Notificaciones"

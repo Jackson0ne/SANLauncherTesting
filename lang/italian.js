@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Apri la Finestra delle Statistiche"
+document.getElementById("statwinlbltxt").innerHTML = "Apri la Finestra delle Statistiche"
 
 statsresettitle = "Reimpostare Tutti I Dati Dei Risultati Archiviati?"
 statsresetbody = "Tutti i dati sugli obiettivi precedentemente memorizzati verranno rimossi da questo dispositivo. I tuoi dati sugli obiettivi più recenti verranno recuperati alla successiva apertura della finestra delle statistiche sugli obiettivi.\n\nTieni presente che il recupero dei dati sugli obiettivi utilizza le chiamate dell'API Web di Steam per ogni gioco di proprietà nella libreria di Steam dell'utente. Valve limita la quantità di chiamate all'API Web di Steam a 100,000 al giorno per la chiave API di ciascun utente.\n\nDi conseguenza, a seconda della quantità di giochi nella tua libreria di Steam, ciò potrebbe influire sulla funzionalità generale dell'applicazione se la funzione per ripristinare i dati degli obiettivi è molto utilizzata."
@@ -228,3 +228,6 @@ statwincurrent = "GIOCO ATTUALE"
 statwinall = "TUTTI I GIOCHI"
 statwincomplete = "COMPLETO (100%)"
 statwintop5 = "5 MIGLIORI GIOCHI"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Mostra Console di Notifica"

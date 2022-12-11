@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Abrir Janela de Estatísticas"
+document.getElementById("statwinlbltxt").innerHTML = "Abrir Janela de Estatísticas"
 
 statsresettitle = "Redefinir Todos Os Dados de Conquista Armazenados?"
 statsresetbody = "Todos os dados de conquistas armazenados anteriormente serão removidos deste dispositivo. Seus dados de conquista mais recentes serão recuperados quando a janela Estatísticas de Conquista for aberta novamente.\n\nEsteja ciente de que a recuperação de dados de conquistas usa chamadas da API Web do Steam para cada jogo de propriedade na Biblioteca Steam do usuário. A Valve limita a quantidade de chamadas da API da Web do Steam a 100,000 por dia para a chave de API de cada usuário.\n\nComo resultado, dependendo da quantidade de jogos na sua Biblioteca Steam, isso pode afetar a funcionalidade geral do aplicativo se a função de redefinir seus dados de conquistas for muito usada."
@@ -228,3 +228,6 @@ statwincurrent = "JOGO ATUAL"
 statwinall = "TODOS OS JOGOS"
 statwincomplete = "COMPLETO (100%)"
 statwintop5 = "5 MELHORES JOGOS"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Mostrar Console de Notificação"

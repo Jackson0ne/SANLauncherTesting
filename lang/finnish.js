@@ -218,7 +218,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "Avaa Tilastot-ikkuna"
+document.getElementById("statwinlbltxt").innerHTML = "Avaa Tilastot-ikkuna"
 
 statsresettitle = "Nollataanko Kaikki Tallennetut Saavutustiedot?"
 statsresetbody = "Kaikki aiemmin tallennetut saavutustiedot poistetaan tältä laitteelta. Viimeisimmät saavutustietosi haetaan, kun Saavutustilastot-ikkuna avataan seuraavan kerran.\n\nHuomaa, että saavutustietojen noutaminen käyttää Steam Web API -kutsuja jokaiselle käyttäjän Steam-kirjastossa olevalle pelille. Valve rajoittaa Steam Web API-kutsujen määrän 100 000:een päivässä kunkin käyttäjän API-avaimella.\n\nTämän seurauksena Steam-kirjastossasi olevien pelien määrästä riippuen tämä voi vaikuttaa sovelluksen yleiseen toimintaan, jos saavutustietojen nollaustoimintoa käytetään huomattavasti liikaa."
@@ -228,3 +228,6 @@ statwincurrent = "NYKYINEN PELI"
 statwinall = "KAIKKI PELIT"
 statwincomplete = "TÄYDELLINEN (100%)"
 statwintop5 = "5 PARHAAT PELIT"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "Näytä Ilmoituskonsoli"

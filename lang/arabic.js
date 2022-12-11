@@ -222,7 +222,7 @@ document.getElementById("ppcontent").innerHTML = `
 `
 
 // Achievement Stats Window (Beta Revision 0.6)
-// document.getElementById("statwinlbltxt").innerHTML = "افتح نافذة إحصائيات الإنجاز"
+document.getElementById("statwinlbltxt").innerHTML = "افتح نافذة إحصائيات الإنجاز"
 
 statsresettitle = "إعادة تعيين كافة بيانات الإنجازات المخزنة؟"
 statsresetbody = "ستتم إزالة جميع بيانات الإنجاز المخزنة مسبقًا من هذا الجهاز. سيتم استرداد بيانات الإنجاز الحالية عند فتح نافذة إحصائيات الإنجاز بعد ذلك.\n\nيرجى العلم أن استرداد بيانات الإنجاز يستخدم استدعاءات Steam Web API لكل لعبة مملوكة في مكتبة Steam الخاصة بالمستخدم. يحد Valve مقدار مكالمات Steam Web API إلى 100,000 يوميًا لكل مفتاح API لكل مستخدم.\n\nنتيجة لذلك ، اعتمادًا على كمية الألعاب في مكتبة Steam الخاصة بك ، قد يؤثر ذلك على الوظيفة العامة للتطبيق إذا تم الإفراط في استخدام وظيفة إعادة تعيين بيانات الإنجاز الخاصة بك."
@@ -232,3 +232,6 @@ statwincurrent = "لعبة الحالية"
 statwinall = "كل الألعاب"
 statwincomplete = "مكتمل (100٪)"
 statwintop5 = "أفضل 5 ألعاب"
+
+// Notify Debug (Beta Revision 0.6)
+document.getElementById("notifydebuglbl").innerHTML = "إظهار وحدة التحكم بالإخطارات"
